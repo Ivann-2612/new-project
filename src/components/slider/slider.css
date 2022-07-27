@@ -1,0 +1,163 @@
+.slider {
+  width: 100vw;
+  height: 75vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 50;
+}
+
+.each-slide {
+  width: 100vw;
+  height: 75vh;
+  float: left;
+  line-height: 100vh;
+  font-size: 40vh;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
+  position: relative;
+  z-index: 500000;
+}
+.each-slide-text {
+  position: relative;
+  z-index: 1000;
+  left: -27%;
+  top: -25%;
+  font-size: 35px;
+  color: #f7fff7;
+}
+.each-slide-text-two {
+  position: absolute;
+  top: -15%;
+  left: 10%;
+  width: 100%;
+  height: 20%;
+  word-break: break-all;
+  text-align: left;
+  z-index: 1000000;
+  font-size: 25px;
+  color: #f7fff7;
+}
+.wrapper {
+  height: 70vh;
+  transition: ease all 0.5s;
+  will-change: transform;
+}
+.arrows {
+  position: absolute;
+  top: 50%;
+  background: none;
+  height: 60px;
+  border: 0;
+  cursor: pointer;
+  transition: ease 0.3s all;
+  outline: none;
+}
+
+.arrows.prev {
+  position: absolute;
+  z-index: 10000000;
+  left: 52%;
+  top: 85%;
+}
+.arrows.prev:hover {
+  opacity: 0.7;
+}
+.arrows.next {
+  position: absolute;
+  z-index: 10000000;
+  left: 55%;
+  top: 85%;
+}
+.arrows.next:hover {
+  opacity: 0.7;
+}
+.dots-container {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  z-index: 10;
+  list-style-type: none;
+}
+.dots-number-div {
+  position: absolute;
+  left: 80%;
+  top: 3%;
+}
+.active-number {
+  width: 100%;
+  height: 100%;
+  color: yellow;
+  font-family: "t-star_probold";
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 5000 !important;
+  top: 60%;
+  right: 0;
+  width: 50%;
+  height: 30vh;
+  background-color: #353535;
+  opacity: 0.9;
+}
+.shadow {
+  position: absolute;
+  right: 0;
+  z-index: 4999;
+  background-color: rgb(155, 159, 158);
+  width: 12%;
+  height: 100%;
+  opacity: 0.8;
+  text-align: left;
+  color: #353535;
+  font-size: 20px;
+  /* filter: blur(1px); */
+}
+.shadow.next {
+  position: absolute;
+  z-index: 10000000;
+  left: 20%;
+  top: -30%;
+  width: 100%;
+  opacity: 1;
+}
+.shadow.next::after {
+  display: inline-block;
+  position: absolute;
+  z-index: 5002;
+  content: " ";
+  background: #fff;
+  width: 50%;
+  height: 1px;
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.shadow.next:hover {
+  left: 20px;
+  transition: all 300ms ease;
+}
+button {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+button:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  cursor: pointer;
+}
+li {
+  display: inline-block;
+  padding: 0 5px;
+}
+li:active button {
+  color: #00d8ff;
+}
